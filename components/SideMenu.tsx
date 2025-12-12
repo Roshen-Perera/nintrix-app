@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const SideMenu = () => {
+interface SideMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const SideMenu:FC<SideMenuProps> = ({ isOpen, onClose }) => {
   return (
     <div>
       Side Menu
