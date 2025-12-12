@@ -71,8 +71,8 @@ export default function RootLayout({
       <body className="font-poppins antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }
