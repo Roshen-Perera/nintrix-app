@@ -1,7 +1,7 @@
 import React from "react";
 
-const CardIcon = () => {
-  return <div>CardIcon</div>;
+const CartIcon = () => {
+  return <div>CartIcon</div>;
 };
 
-export default CardIcon;
+export default CartIcon;
