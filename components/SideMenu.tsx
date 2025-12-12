@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Logo from "./Logo";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -12,7 +13,12 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }hoverEffect`}
     >
-      Side Menu
+      <div className="min-w-72 max-w-96 bg-black h-screen p-10 border-r border-r-shop_light_green flex flex-col gap-6">
+        <div>
+          <Logo className="text-white" />
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 };
