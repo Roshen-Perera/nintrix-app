@@ -1,6 +1,6 @@
 import { Facebook, Github, Linkedin, Youtube } from "lucide-react";
 import React from "react";
-import { Tooltip, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -44,6 +44,7 @@ const SocialIcons = ( { className, iconClassName, toolTipClassName }: Props ) =>
                 {item?.icon}
               </a>
             </TooltipTrigger>
+            <TooltipContent className={cn("bg-white text-darkColor font-semibold", toolTipClassName)}>{item?.name}</TooltipContent>
           </Tooltip>
         ))}
       </div>
