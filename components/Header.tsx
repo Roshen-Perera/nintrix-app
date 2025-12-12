@@ -1,12 +1,11 @@
 import React from 'react'
-import Container from './Container';
 
 const Header = () => {
   return (
     <header>
-      <Container className='bg-red'>Header</Container>
+        Header
     </header>
-  );
+  )
 }
 
 export default Header
