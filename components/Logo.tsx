@@ -5,8 +5,8 @@ import React from "react";
 const Logo = ({className}: {className?: string}) => {
   return (
     <Link href={"/"}>
-      <h2 className={cn("", className)}>
-        Shopcar<span>t</span>
+      <h2 className={cn("text-2xl text-shop_dark_green font-black tracking-wider uppercase hover:text-shop_light_green hoverEffect font-sans", className)}>
+        Shopcar<span className="text-shop_light_green group-hover:text-shop_btn_dark_green">t</span>
       </h2>
     </Link>
   );
