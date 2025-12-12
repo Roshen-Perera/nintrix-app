@@ -8,7 +8,8 @@ const Header = () => {
     <header className="bg-white py-5 ">
       <Container>
         <Logo />
-        <HeaderMenu/>
+        <HeaderMenu />
+        <div>Others</div>
       </Container>
     </header>
   );
