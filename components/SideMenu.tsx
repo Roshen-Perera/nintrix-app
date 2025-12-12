@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import { headerData } from "./constants/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SocialIcons from "./SocialIcons";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -33,7 +34,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
             <Link key={item?.title} href={item?.href} className={`hover:text-shop_light_green hoverEffect ${pathName === item?.href && "text-shop_light_green"}`}>{item?.title}</Link>
           ))}
         </div>
-        <div></div>
+        <SocialIcons />
       </div>
     </div>
   );
