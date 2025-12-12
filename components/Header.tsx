@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar";
 import FavouriteButton from "./FavouriteButton";
 import CartIcon from "./CardIcon";
 import SignInBtn from "./SignInBtn";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
       <Container className="flex items-center justify-between">
         <div>
           <Logo />
+          <MobileMenu />
         </div>
         <HeaderMenu />
         <div className="w-auto md:1/3 flex items-center justify-end gap-5">
