@@ -1,8 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, use } from "react";
 import Logo from "./Logo";
 import { X } from "lucide-react";
 import { headerData } from "./constants/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -10,6 +11,7 @@ interface SideMenuProps {
 }
 
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
+  const pathName = usePathname();
   return (
     <div
       className={`fixed inset-y-0 h-screen left-0 z-50 w-full text-white/80 bg-black/50 shadow-xl ${
