@@ -3,7 +3,11 @@ import React from "react";
 
 const MobileMenu = () => {
   return (
-      <button><AlignLeft className="hover:text-darkColor hover:cursor-pointer hoverEffect md:hidden" /></button>
+    <>
+      <button>
+        <AlignLeft className="hover:text-darkColor hover:cursor-pointer hoverEffect md:hidden" />
+      </button>
+    </>
   );
 };
 
