@@ -11,7 +11,9 @@ const MobileMenu = () => {
       <button onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}>
         <AlignLeft className="hover:text-darkColor hover:cursor-pointer hoverEffect md:hidden" />
       </button>
-      <SideMenu />
+      <div className="md:hidden">
+        <SideMenu />
+      </div>
     </>
   );
 };
