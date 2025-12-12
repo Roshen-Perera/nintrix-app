@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "@radix-ui/react-accordion";
 
 export const metadata: Metadata = {
   title: "NinTrix – Your Trusted Online Tech Store",
@@ -66,6 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Header />
       <body className="font-poppins antialiased"
       >
         {children}
