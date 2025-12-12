@@ -13,6 +13,7 @@ interface SideMenuProps {
 
 const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const pathName = usePathname();
+  const sidebarRef = useOutSideClick<HTMLDivElement>(onClose);
   return (
     <div
       className={`fixed inset-y-0 h-screen left-0 z-50 w-full text-white/80 bg-black/50 shadow-xl ${
