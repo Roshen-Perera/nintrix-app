@@ -68,9 +68,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header />
-      <body className="font-poppins antialiased"
-      >
+      <body className="font-poppins antialiased">
+        <Header />
         {children}
       </body>
       <Footer />
