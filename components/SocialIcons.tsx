@@ -39,10 +39,10 @@ const SocialIcons = ( { className, iconClassName, toolTipClassName }: Props ) =>
       <div className={cn("flex items-center gap-3.5", className)}>
         {socialLinks?.map((item) => (
           <Tooltip key={item?.name}>
-            <TooltipTrigger>
-              <Link key={item?.name} href={item?.href}>
+            <TooltipTrigger asChild>
+              <a key={item?.name} href={item?.href} className={cn("p-2 border rounded-full", iconClassName)} target="_blank" rel="noopener noreferrer">
                 {item?.icon}
-              </Link>
+              </a>
             </TooltipTrigger>
           </Tooltip>
         ))}
