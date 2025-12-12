@@ -6,7 +6,7 @@ import HeaderMenu from "./HeaderMenu";
 const Header = () => {
   return (
     <header className="bg-white py-5 ">
-      <Container>
+      <Container className="flex items-center justify-between">
         <Logo />
         <HeaderMenu />
         <div>Others</div>
