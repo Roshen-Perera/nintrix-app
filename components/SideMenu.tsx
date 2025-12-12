@@ -5,6 +5,7 @@ import { headerData } from "./constants/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SocialIcons from "./SocialIcons";
+import { useOutSideClick } from "@/hooks";
 
 interface SideMenuProps {
   isOpen: boolean;
