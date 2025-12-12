@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const Header = () => {
   return (
-    <header>
+    <header className="bg-white py-5 ">
       <Container>Header</Container>
     </header>
   );
