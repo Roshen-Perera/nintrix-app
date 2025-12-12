@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import HeaderMenu from "./HeaderMenu";
 import SearchBar from "./SearchBar";
 import FavouriteButton from "./FavouriteButton";
+import CartIcon from "./CardIcon";
 
 const Header = () => {
   return (
