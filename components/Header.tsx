@@ -3,6 +3,7 @@ import Container from "./Container";
 import Logo from "./Logo";
 import HeaderMenu from "./HeaderMenu";
 import SearchBar from "./SearchBar";
+import FavouriteButton from "./FavouriteButton";
 
 const Header = () => {
   return (
@@ -10,7 +11,11 @@ const Header = () => {
       <Container className="flex items-center justify-between">
         <Logo />
         <HeaderMenu />
-        <SearchBar />
+        <div>
+          <SearchBar />
+          <CartIcon />
+          <FavouriteButton />
+        </div>
       </Container>
     </header>
   );
