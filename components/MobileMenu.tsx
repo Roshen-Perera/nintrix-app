@@ -1,11 +1,12 @@
-import React from 'react'
+import { AlignLeft } from "lucide-react";
+import React from "react";
 
 const MobileMenu = () => {
   return (
     <div>
-      Mobile Menu
+      <button><AlignLeft className="hover:text-darkColor hover:cursor-pointer hoverEffect md:hidden" /></button>
     </div>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;
