@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import Logo from "./Logo";
 import { X } from "lucide-react";
+import { headerData } from "./constants/data";
+import Link from "next/link";
 
 interface SideMenuProps {
   isOpen: boolean;
@@ -23,6 +25,11 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
           >
             <X />
           </button>
+        </div>
+        <div>
+          {headerData?.map((item) => (
+            <Link key={item?.title} href={item?.href}>{item?.title}</Link>
+          ))}
         </div>
         <div></div>
       </div>
