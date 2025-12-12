@@ -18,7 +18,7 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between gap-5">
           <Logo className="text-white" />
           <button
-            className="hover:text-shop_light_green hoverEffect absolute top-6 right-6"
+            className="hover:text-shop_light_green hoverEffect top-6 right-6"
             onClick={onClose}
           >
             <X />
