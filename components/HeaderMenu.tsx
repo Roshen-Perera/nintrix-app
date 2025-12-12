@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { use } from "react";
 import { headerData } from "./constants/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeaderMenu = () => {
+    const pathName = usePathname();
+    console.log(pathName);
+    
   return (
     <div className="hidden md:inline-flex w-1/3 items-center gap-7 text-sm capitalize font-semibold text-lightColor">
       {headerData?.map((item) => (
