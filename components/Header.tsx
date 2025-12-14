@@ -30,7 +30,7 @@ const Header = async () => {
             <SignedIn>
               <UserButton />
             </SignedIn>
-            <SignInBtn />
+            {!user && <SignInBtn />}
           </ClerkLoaded>
         </div>
       </Container>
