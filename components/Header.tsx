@@ -8,8 +8,9 @@ import CartIcon from "./CardIcon";
 import SignInBtn from "./SignInBtn";
 import MobileMenu from "./MobileMenu";
 import { currentUser } from "@clerk/nextjs/server";
+import { ClerkLoaded } from "@clerk/nextjs";
 
-const Header = async() => {
+const Header = async () => {
   const user = await currentUser();
   console.log("Current User:", user);
   return (
@@ -24,7 +25,9 @@ const Header = async() => {
           <SearchBar />
           <CartIcon />
           <FavouriteButton />
-          <SignInBtn />
+          <ClerkLoaded>
+            <SignInBtn />
+          </ClerkLoaded>
         </div>
       </Container>
     </header>
