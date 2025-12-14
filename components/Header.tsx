@@ -9,6 +9,7 @@ import SignInBtn from "./SignInBtn";
 import MobileMenu from "./MobileMenu";
 import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/clerk-react";
 
 const Header = async () => {
   const user = await currentUser();
@@ -26,6 +27,9 @@ const Header = async () => {
           <CartIcon />
           <FavouriteButton />
           <ClerkLoaded>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
             <SignInBtn />
           </ClerkLoaded>
         </div>
