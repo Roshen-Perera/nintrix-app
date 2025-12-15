@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: ['@clerk/nextjs', '@clerk/shared'],
+  experimental: {
+    optimizePackageImports: ['@clerk/nextjs'],
+  },
 };
 
 export default nextConfig;
