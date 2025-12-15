@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Container from "./Container";
 import Logo from "./Logo";
@@ -7,13 +9,9 @@ import FavouriteButton from "./FavouriteButton";
 import CartIcon from "./CardIcon";
 import SignInBtn from "./SignInBtn";
 import MobileMenu from "./MobileMenu";
-import { currentUser } from "@clerk/nextjs/server";
-import { ClerkLoaded } from "@clerk/nextjs";
-import { SignedIn, UserButton } from "@clerk/clerk-react";
+import { ClerkLoaded, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
-const Header = async () => {
-  const user = await currentUser();
-  console.log("Current User:", user);
+const Header = () => {
   return (
     <header className="bg-white py-5 border-b border-b-black/20">
       <Container className="flex items-center justify-between text-lightColor">
@@ -30,7 +28,9 @@ const Header = async () => {
             <SignedIn>
               <UserButton />
             </SignedIn>
-            {!user && <SignInBtn />}
+            <SignedOut>
+              <SignInBtn />
+            </SignedOut>
           </ClerkLoaded>
         </div>
       </Container>
