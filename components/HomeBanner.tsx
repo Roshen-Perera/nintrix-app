@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeBanner = () => {
   return (
-    <div>
+    <div className='py-16 md:py-0'>
         HomeBanner
     </div>
   )
