@@ -6,7 +6,7 @@ const HomeBanner = () => {
     <div className="py-16 md:py-0 bg-shop_light_pink rounded-lg px-10 lg:px-24 flex items-center justify-between">
       <div>
         <Title>
-          Grab up to 50% off on <br />
+          Grab Upto 50% off on <br />
           selected items!
         </Title>
       </div>
