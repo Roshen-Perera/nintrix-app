@@ -10,7 +10,7 @@ const HomeBanner = () => {
           Grab Upto 50% off on <br />
           selected items!
         </Title>
-        <Link href={"/shop"} className="bg-shop_btn_dark_green font-semibold">Buy Now</Link>
+        <Link href={"/shop"} className="bg-shop_btn_dark_green/90 text-white/90 px-5 py-2 rounded-md text-sm font-semibold hover:text-white hover:bg-shop_dark_green hoverEffect">Buy Now</Link>
       </div>
       <div></div>
     </div>
