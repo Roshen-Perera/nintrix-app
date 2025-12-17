@@ -71,7 +71,9 @@ export default function RootLayout({
       <html lang="en">
         <body className="font-poppins antialiased">
           <div className="flex flex-col min-h-screen">
-            
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </body>
       </html>
