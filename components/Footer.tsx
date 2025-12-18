@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <FooterTop />
         <div>
-          <div>
+          <div className="space-y-4">
             <Logo />
             <p>
               Discover the best products and deals with Shopcart, your one-stop
