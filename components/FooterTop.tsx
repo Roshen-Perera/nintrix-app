@@ -43,8 +43,8 @@ const FooterTop = () => {
         <div key={index} className="flex items-center gap-3 group hover:bg-gray-50 p-4 transition-colors">
           {item?.icon}
           <div>
-            <h3>{item?.title}</h3>
-            <p>{item?.subtitle}</p>
+            <h3 className="font-semibold text-gray-900 hover:text-primary">{item?.title}</h3>
+            <p className="text-gray-600 text-sm mt-1 group-hover:text-gray-900">{item?.subtitle}</p>
           </div>
         </div>
       ))}
