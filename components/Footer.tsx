@@ -7,6 +7,12 @@ const Footer = () => {
     <footer className='bg-white border-t'>
       <Container>
         <FooterTop />
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </Container>
     </footer>
   )
