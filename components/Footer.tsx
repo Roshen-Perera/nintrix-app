@@ -12,9 +12,10 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Logo />
-            <p>
-              Discover the best products and deals with Shopcart, your one-stop
-              online shop.
+            <p className="text-gray-600 text-sm">
+              Find essentials and unique items with real reviews and clear
+              pricing—plus fast delivery, secure checkout, easy returns, and
+              responsive support.
             </p>
             <SocialIcons
               className="text-darkColor/60"
