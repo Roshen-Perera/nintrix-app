@@ -4,7 +4,7 @@ import FooterTop from './FooterTop'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='mb-40'>
       <Container>
         <FooterTop />
       </Container>
