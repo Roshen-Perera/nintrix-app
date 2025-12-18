@@ -40,7 +40,7 @@ const FooterTop = () => {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 border-b">
       {data?.map((item, index) => (
-        <div key={index} className="flex items-center gap-3">
+        <div key={index} className="flex items-center gap-3 group hover:bg-gray-50 p-4 transition-colors">
           {item?.icon}
           <div>
             <h3>{item?.title}</h3>
