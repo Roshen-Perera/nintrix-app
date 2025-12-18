@@ -1,5 +1,5 @@
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
-import React from 'react'
+import { MapPin, Phone, Clock, Mail, Contact } from "lucide-react";
+import React from "react";
 interface ContactItemData {
   title: string;
   subtitle: string;
@@ -38,8 +38,18 @@ const data: ContactItemData[] = [
 ];
 const FooterTop = () => {
   return (
-    <div>FooterTop</div>
-  )
+    <div>
+      {data?.map((item, index) => (
+        <ContactItem key={index} />
+      ))}
+    </div>
+  );
+};
+
+const ContactItem = () => {
+  return <div>
+    <p>hello</p>
+  </div>;
 }
 
-export default FooterTop
+export default FooterTop;
