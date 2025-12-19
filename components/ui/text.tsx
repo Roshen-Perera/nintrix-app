@@ -26,5 +26,5 @@ const subText = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <p>{children}</p>;
+  return <p className={cn("text-sm text-gray-600", className)}>{children}</p>;
 };
