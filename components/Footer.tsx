@@ -33,7 +33,7 @@ const Footer = () => {
                 <li key={item?.title}>
                   <Link
                     href={item?.href}
-                    className="text-black
+                    className="hover:text-shop_light_green hoverEffect
                   "
                   >
                     {item?.title}
