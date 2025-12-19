@@ -29,8 +29,8 @@ const Footer = () => {
           <div>
             <SubTitle>Quick Links</SubTitle>
             <ul>{quickLinksData?.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.title}</Link>
+              <li key={item?.title}>
+                <Link href={item?.href}>{item?.title}</Link>
               </li>
             ))}</ul>
           </div>
