@@ -3,6 +3,7 @@ import Container from "./Container";
 import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialIcons from "./SocialIcons";
+import { SubText } from "./ui/text";
 
 const Footer = () => {
   return (
