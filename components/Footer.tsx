@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Logo />
-            <SubText className="text-gray-600 text-sm">
+            <SubText>
               Find essentials and unique items with real reviews and clear
               pricing—plus fast delivery, secure checkout, easy returns, and
               responsive support.
