@@ -28,11 +28,13 @@ const Footer = () => {
           </div>
           <div>
             <SubTitle>Quick Links</SubTitle>
-            <ul>{quickLinksData?.map((item) => (
-              <li key={item?.title}>
-                <Link href={item?.href}>{item?.title}</Link>
-              </li>
-            ))}</ul>
+            <ul className="space-y-3 mt-4">
+              {quickLinksData?.map((item) => (
+                <li key={item?.title}>
+                  <Link href={item?.href}>{item?.title}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
           <div></div>
           <div></div>
