@@ -19,7 +19,7 @@ export const Title = ({
   );
 };
 
-export const subText = ({
+export const SubText = ({
   children,
   className,
 }: {
