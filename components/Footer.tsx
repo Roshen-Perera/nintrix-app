@@ -4,6 +4,8 @@ import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialIcons from "./SocialIcons";
 import { SubText, SubTitle } from "./ui/text";
+import { quickLinksData } from "./constants/data";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -24,7 +26,14 @@ const Footer = () => {
               toolTipClassName="bg-darkColor text-white"
             />
           </div>
-          <div><SubTitle>Quick Links</SubTitle></div>
+          <div>
+            <SubTitle>Quick Links</SubTitle>
+            <ul>{quickLinksData?.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.title}</Link>
+              </li>
+            ))}</ul>
+          </div>
           <div></div>
           <div></div>
         </div>
