@@ -26,12 +26,7 @@ export const SubTitle = ({
   className?: string;
 }) => {
   return (
-    <h3
-      className={cn(
-        "font-semibold text-gray-900 font-sans",
-        className
-      )}
-    >
+    <h3 className={cn("font-semibold text-gray-900 font-sans", className)}>
       {children}
     </h3>
   );
