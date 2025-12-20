@@ -6,6 +6,8 @@ import SocialIcons from "./SocialIcons";
 import { SubText, SubTitle } from "./ui/text";
 import { categoriesData, quickLinksData } from "./constants/data";
 import Link from "next/link";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -58,8 +60,17 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <SubTitle>Contact Us</SubTitle>
+          <div className="space-y-4">
+            <SubTitle>Newsletter</SubTitle>
+            <SubText>
+              Subscribe to our newsletter to get the latest updates and
+              exclusive offers.
+            </SubText>
+
+            <form className="space-y-3">
+              <Input type="email" placeholder="Enter your email" />
+              <Button className="w-full">Subscribe</Button>
+            </form>
           </div>
         </div>
       </Container>
