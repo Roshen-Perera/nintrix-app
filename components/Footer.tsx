@@ -68,9 +68,15 @@ const Footer = () => {
             </SubText>
 
             <form className="space-y-3">
-              <Input type="email" placeholder="Enter your email" required/>
+              <Input type="email" placeholder="Enter your email" required />
               <Button className="w-full">Subscribe</Button>
             </form>
+          </div>
+        </div>
+        <div className="py-6 border-t text-center text-sm text-gray-600">
+          <div>
+            © {new Date().getFullYear()} <Logo className="text-sm" />. All
+            rights reserved.
           </div>
         </div>
       </Container>
