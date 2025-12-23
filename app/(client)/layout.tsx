@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { ClerkProvider } from "@clerk/nextjs"; 
+import { ClerkProvider } from "@clerk/nextjs";
 export const metadata: Metadata = {
   title: "NinTrix – Your Trusted Online Tech Store",
   description:
@@ -60,7 +60,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,15 +67,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className="font-poppins antialiased">
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </body>
-      </html>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
     </ClerkProvider>
   );
 }
