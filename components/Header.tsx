@@ -7,31 +7,31 @@ import FavouriteButton from "./FavouriteButton";
 import CartIcon from "./CardIcon";
 import SignInBtn from "./SignInBtn";
 import MobileMenu from "./MobileMenu";
-import { currentUser } from "@clerk/nextjs/server";
-import { ClerkLoaded, SignedIn, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
-const Header = async () => {
-  const user = await currentUser();
-  console.log("Current User:", user);
-
+const Header = () => {
   return (
     <header className="bg-white py-5">
-      <Container className="flex items-center justify-between text-lightColor">
-        <div className="w-auto md:w-1/3 flex items-center gap-2.5 justify-start md:gap-0">
-          <MobileMenu /> {/* Must have 'use client' */}
+      <Container className="flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <MobileMenu />
           <Logo />
         </div>
-        <HeaderMenu /> {/* Must have 'use client' */}
-        <div className="w-auto md:1/3 flex items-center justify-end gap-5">
-          <SearchBar /> {/* Must have 'use client' */}
-          <CartIcon /> {/* Must have 'use client' */}
-          <FavouriteButton /> {/* Must have 'use client' */}
-          <ClerkLoaded>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-            {!user && <SignInBtn />}
-          </ClerkLoaded>
+
+        <HeaderMenu />
+
+        <div className="flex items-center gap-5">
+          <SearchBar />
+          <CartIcon />
+          <FavouriteButton />
+
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+
+          <SignedOut>
+            <SignInBtn />
+          </SignedOut>
         </div>
       </Container>
     </header>
