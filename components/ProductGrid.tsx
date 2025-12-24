@@ -12,7 +12,7 @@ const ProductGrid = () => {
 
   return (
     <div className="flex items-center justify-between flex-wrap gap-5">
-      <div>
+      <div className="flex items-center gap-1.5 text-sm font-semibold">
         {productType?.map((item) => (
           <button key={item?.title}>{item?.title}</button>
         ))}
