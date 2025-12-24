@@ -2,7 +2,12 @@ import { productType } from '@/constants/data';
 import Link from 'next/link';
 import React from 'react'
 
-const HomeTabBar = () => {
+interface Props {
+    selectedCategory?: string;
+    onCategorySelect?: (category: string) => void;
+}
+
+const HomeTabBar = ({selectedCategory, onCategorySelect}: Props) => {
   return (
     <div className="flex items-center justify-between flex-wrap gap-5">
       <div className="flex items-center gap-3 text-sm font-semibold">
