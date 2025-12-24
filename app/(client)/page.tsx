@@ -1,6 +1,6 @@
 import Container from '@/components/Container'
 import HomeBanner from '@/components/HomeBanner'
-import ProductGrid from '@/components/ProductGrid'
+import HomeTabBar from '@/components/HomeTabBar'
 import React from 'react'
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <Container className="bg-shop-light-pink">
       <HomeBanner />
       <div className="py-10">
-        <ProductGrid />
+        <HomeTabBar />
       </div>
     </Container>
   );
