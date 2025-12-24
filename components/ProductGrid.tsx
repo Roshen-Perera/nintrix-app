@@ -14,7 +14,7 @@ const ProductGrid = () => {
 
   return (
     <div>
-      <HomeTabBar />
+      <HomeTabBar selectedCategory={selectedCategory} onCategorySelect={setSelectedCategory} />
     </div>
   );
 };
