@@ -1,13 +1,13 @@
-import { productType } from '@/constants/data';
-import Link from 'next/link';
-import React from 'react'
+import { productType } from "@/constants/data";
+import Link from "next/link";
+import React from "react";
 
 interface Props {
-    selectedCategory?: string;
-    onCategorySelect?: (category: string) => void;
+  selectedCategory?: string;
+  onCategorySelect?: (category: string) => void;
 }
 
-const HomeTabBar = ({selectedCategory, onCategorySelect}: Props) => {
+const HomeTabBar = ({ selectedCategory, onCategorySelect }: Props) => {
   return (
     <div className="flex items-center justify-between flex-wrap gap-5">
       <div className="flex items-center gap-3 text-sm font-semibold">
@@ -28,6 +28,6 @@ const HomeTabBar = ({selectedCategory, onCategorySelect}: Props) => {
       </Link>
     </div>
   );
-}
+};
 
-export default HomeTabBar
+export default HomeTabBar;
