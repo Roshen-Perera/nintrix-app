@@ -10,6 +10,7 @@ interface Props {
 }
 
 const HomeTabBar = ({ selectedCategory, onCategorySelect }: Props) => {
+  console.log(selectedCategory);
   return (
     <div className="flex items-center justify-between flex-wrap gap-5">
       <div className="flex items-center gap-3 text-sm font-semibold">
