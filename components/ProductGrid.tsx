@@ -8,7 +8,7 @@ import { productType } from "@/constants/data";
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(productType[0]?.title);
 
   return (
     <div className="flex items-center justify-between flex-wrap gap-5">
