@@ -5,11 +5,13 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <Container className='bg-shop-light-pink'>
+    <Container className="bg-shop-light-pink">
       <HomeBanner />
-      <ProductGrid />
+      <div className="py-12">
+        <ProductGrid />
+      </div>
     </Container>
-  )
+  );
 }
 
 export default Home
