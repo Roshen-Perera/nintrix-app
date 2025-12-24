@@ -4,7 +4,7 @@ import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialIcons from "./SocialIcons";
 import { SubText, SubTitle } from "./ui/text";
-import { categoriesData, quickLinksData } from "./constants/data";
+import { categoriesData, quickLinksData } from "../constants/data";
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";

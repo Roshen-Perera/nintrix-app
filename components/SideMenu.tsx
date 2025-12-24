@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Logo from "./Logo";
 import { X } from "lucide-react";
-import { headerData } from "./constants/data";
+import { headerData } from "../constants/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SocialIcons from "./SocialIcons";
@@ -21,9 +21,12 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } hoverEffect`}
     >
-      <div ref={sidebarRef} className="min-w-72 max-w-96 bg-black h-screen p-10 border-r border-r-shop_light_green flex flex-col gap-6">
+      <div
+        ref={sidebarRef}
+        className="min-w-72 max-w-96 bg-black h-screen p-10 border-r border-r-shop_light_green flex flex-col gap-6"
+      >
         <div className="flex items-center justify-between gap-5">
-          <Logo className="text-white" spanDesign="group-hover:text-white"/>
+          <Logo className="text-white" spanDesign="group-hover:text-white" />
           <button
             className="hover:text-shop_light_green hoverEffect top-6 right-6"
             onClick={onClose}
@@ -33,7 +36,13 @@ const SideMenu: FC<SideMenuProps> = ({ isOpen, onClose }) => {
         </div>
         <div className="flex flex-col space-y-3.5 font-semibold tracking-wide">
           {headerData?.map((item) => (
-            <Link key={item?.title} href={item?.href} className={`hover:text-shop_light_green hoverEffect ${pathName === item?.href && "text-shop_light_green"}`}>{item?.title}</Link>
+            <Link
+              key={item?.title}
+              href={item?.href}
+              className={`hover:text-shop_light_green hoverEffect ${pathName === item?.href && "text-shop_light_green"}`}
+            >
+              {item?.title}
+            </Link>
           ))}
         </div>
         <SocialIcons />
