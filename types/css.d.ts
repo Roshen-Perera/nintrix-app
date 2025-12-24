@@ -4,4 +4,4 @@ declare module '*.css' {
     export default content;
 }
 
-declare module './globals.css';
+declare module '../globals.css';
