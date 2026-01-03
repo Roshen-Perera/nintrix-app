@@ -45,6 +45,8 @@ const ProductGrid = () => {
         <div className="flex justify-center items-center h-64">
         </div>
       ) : (
+        <>products</>
+      )}
     </div>
   );
 };
