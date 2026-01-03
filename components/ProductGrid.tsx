@@ -40,6 +40,10 @@ const ProductGrid = () => {
         selectedCategory={selectedCategory}
         onCategorySelect={setSelectedCategory}
       />
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+        </div>
+      ) : (
     </div>
   );
 };
