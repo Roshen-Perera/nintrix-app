@@ -7,6 +7,7 @@ import { productType } from "@/constants/data";
 import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
 import { motion } from "motion/react"
+import { Loader2 } from "lucide-react";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -42,7 +43,11 @@ const ProductGrid = () => {
         onCategorySelect={setSelectedCategory}
       />
       {loading ? (
-        <div className="flex justify-center items-center h-64">
+        <div className="">
+          <motion.div>
+            <Loader2 />
+            <span>Products are loading...</span>
+          </motion.div>
         </div>
       ) : (
         <>products</>
