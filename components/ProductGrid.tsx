@@ -6,6 +6,7 @@ import Link from "next/link";
 import { productType } from "@/constants/data";
 import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
+import { motion } from "motion/react"
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
