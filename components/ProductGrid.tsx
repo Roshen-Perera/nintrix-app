@@ -8,7 +8,7 @@ import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
 
 const ProductGrid = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(
     productType[0]?.title || ""
