@@ -6,7 +6,7 @@ import Link from "next/link";
 import { productType } from "@/constants/data";
 import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import { Loader2 } from "lucide-react";
 
 const ProductGrid = () => {
@@ -35,7 +35,6 @@ const ProductGrid = () => {
     fetchData();
   }, [selectedCategory]);
 
-
   return (
     <div>
       <HomeTabBar
@@ -45,12 +44,14 @@ const ProductGrid = () => {
       {loading ? (
         <div className="flex flex-col justify-center items-center py-10 min-h-80 gap-4  bg-gray-100 w-full mt-10">
           <div className="space-x-2 flex items-center text-blue-600">
-            <Loader2 className="w-5 h-6 animate-spin"/>
+            <Loader2 className="w-5 h-6 animate-spin" />
             <span>Products are loading...</span>
           </div>
         </div>
+      ) : products?.length ? (
+        <>Product</>
       ) : (
-        <>products</>
+        <>No Products</>
       )}
     </div>
   );
