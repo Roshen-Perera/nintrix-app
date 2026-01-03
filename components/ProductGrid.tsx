@@ -42,8 +42,8 @@ const ProductGrid = () => {
         selectedCategory={selectedCategory}
         onCategorySelect={setSelectedCategory}
       />
-      {loading ? (
-        <div className="">
+      {!loading ? (
+        <div className="flex flex-col justify-center items-center py-10 min-h-80 gap-4  bg-gray-100 w-full mt-10">
           <motion.div>
             <Loader2 />
             <span>Products are loading...</span>
