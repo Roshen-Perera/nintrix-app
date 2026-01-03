@@ -8,30 +8,30 @@ import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
 
 const ProductGrid = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(
     productType[0]?.title || ""
   );
-
-  const query = `*[_type == "product" && variant == "$variant"] | order(name desc){
- ..., "categories":categories[]->title
+  const query = `*[_type == "product" && variant == $variant] | order(name asc){
+  ...,"categories": categories[]->title
 }`;
-const params = {variant: selectedCategory.toLowerCase()};
+  const params = { variant: selectedCategory.toLowerCase() };
 
-useEffect(() => {
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const response = await client.fetch(query, params);
-      console.log(response);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
-}, [selectedCategory]);
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await client.fetch(query, params);
+        setProducts(response);
+      } catch (error) {
+        console.log("Product fetching Error", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [selectedCategory]);
 
 
   return (
