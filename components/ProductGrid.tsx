@@ -6,7 +6,7 @@ import Link from "next/link";
 import { productType } from "@/constants/data";
 import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Loader2 } from "lucide-react";
 import NoProductAvailable from "./NoProductAvailable";
 
@@ -50,7 +50,15 @@ const ProductGrid = () => {
           </div>
         </div>
       ) : products?.length ? (
-        <>Product</>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 mt-10">
+          {products.map((product) => (
+            <AnimatePresence key={product?._id}>
+              <motion.div>
+                <div>product</div>
+              </motion.div>
+            </AnimatePresence>
+          ))}
+        </div>
       ) : (
         <NoProductAvailable selectedTab={selectedCategory} />
       )}
