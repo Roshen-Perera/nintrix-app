@@ -76,11 +76,15 @@ const ProductCard = ({ product }: { product: Product }) => {
         </div>
         <div className="flex items-center gap-2.5">
           <p className="font-medium">In Stock</p>
-          <p className={`font-semibold ${product?.stock === 0 ? "text-red-600" : "text-shop_light_green"}`}>{(product?.stock as number) > 0 ? product?.stock : "Out of Stock"}</p>
+          <p
+            className={`font-semibold ${product?.stock === 0 ? "text-red-600" : "text-shop_light_green"}`}
+          >
+            {(product?.stock as number) > 0 ? product?.stock : "Out of Stock"}
+          </p>
         </div>
 
         <PriceView price={product?.price} discount={product?.discount} />
-        <AddToCartBtn product={product} className="w-36 rounded-full"/>
+        <AddToCartBtn product={product} className="w-36 rounded-full" />
       </div>
     </div>
   );
