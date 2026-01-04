@@ -7,6 +7,7 @@ import React from "react";
 import AddToWishlistBtn from "./AddToWishlistBtn";
 import Title from "./Title";
 import PriceView from "./PriceView";
+import AddToCartBtn from "./AddToCartBtn";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -86,6 +87,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           </p>
         </div>
         <PriceView price={product?.price} discount={product?.discount} />
+        <AddToCartBtn product={product} className="w-36 rounded-full"/>
       </div>
     </div>
   );
