@@ -9,6 +9,7 @@ import { client } from "@/sanity/lib/client";
 import { AnimatePresence, motion } from "motion/react";
 import { Loader2 } from "lucide-react";
 import NoProductAvailable from "./NoProductAvailable";
+import ProductCard from "./ProductCard";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -54,7 +55,7 @@ const ProductGrid = () => {
           {products.map((product) => (
             <AnimatePresence key={product?._id}>
               <motion.div>
-                <div>product</div>
+                <ProductCard product={product} />
               </motion.div>
             </AnimatePresence>
           ))}
