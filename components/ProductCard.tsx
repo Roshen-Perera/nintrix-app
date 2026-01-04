@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AddToWishlistBtn from "./AddToWishlistBtn";
+import { Title } from "./ui/text";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -49,6 +50,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         {product?.categories && (
           <p className="uppercase line-clamp-1 text-xs text-shop_light_text">{product?.categories?.map((cat) => cat).join(", ")}</p>
         )}
+        <Title className="text-sm line-clamp-1">{product?.name}</Title>
       </div>
     </div>
   );
