@@ -7,7 +7,11 @@ interface Props {
 }
 
 const PriceView = ({ price, discount, className }: Props) => {
-  return <div>PCV</div>;
+  return (
+    <div>
+      <p>{price}</p>
+    </div>
+  );
 };
 
 export default PriceView;
