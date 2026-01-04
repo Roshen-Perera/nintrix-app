@@ -57,6 +57,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
               <StarIcon
+                size={15}
                 key={index}
                 className={
                   index < 4 ? "text-shop_lighter_green" : "text-shop_lighter_text"
