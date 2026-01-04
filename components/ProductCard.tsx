@@ -17,7 +17,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             loading="lazy"
             width={700}
             height={700}
-            className={`w-full h-64 object-contain overflow-hidden transition-transform bg-shop_light_bg duration-500 
+            className={`w-full h-64 object-contain overflow-hidden transition-transform bg-shop_light_bg hoverEffect 
               ${product?.stock !== 0 ? "group-hover:scale-105" : "opacity-50"}`}
           />
         )}
@@ -47,7 +47,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </div>
       <div className="p-3">
         {product?.categories && (
-          <p>{product?.categories?.map((cat) => cat).join(", ")}</p>
+          <p className="uppercase line-clamp-1 text-xs text-shop">{product?.categories?.map((cat) => cat).join(", ")}</p>
         )}
       </div>
     </div>
