@@ -1,6 +1,12 @@
+import { Product } from '@/sanity.types';
 import React from 'react'
 
-const AddToCartBtn = () => {
+interface Props {
+    product?: Product;
+    className?: string;
+}
+
+const AddToCartBtn = ({ product, className }: Props) => {
   return (
     <div>
       addcart
