@@ -16,6 +16,7 @@ const AddToCartBtn = ({ product, className }: Props) => {
   return (
     <div>
       <Button
+        disabled={isOutOfStock}
         className={cn(
           "w-full bg-shop_dark_green/80 text-lightBg shadow-none border border-shop_dark_green/80 font-semibold tracking-wide text-shop_light_bg hover:bg-shop_dark_green hover:border-shop_dark_green hoverEffect",
           className
