@@ -13,7 +13,7 @@ import ProductCard from "./ProductCard";
 import { Product } from "@/sanity.types";
 
 const ProductGrid = () => {
-  const [products, setProducts] = useState<Product>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(
     productType[0]?.title || ""
