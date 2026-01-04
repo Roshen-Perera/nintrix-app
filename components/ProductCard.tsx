@@ -48,13 +48,21 @@ const ProductCard = ({ product }: { product: Product }) => {
       </div>
       <div className="p-3 flex flex-col gap-2">
         {product?.categories && (
-          <p className="uppercase line-clamp-1 text-xs text-shop_light_text">{product?.categories?.map((cat) => cat).join(", ")}</p>
+          <p className="uppercase line-clamp-1 text-xs text-shop_light_text">
+            {product?.categories?.map((cat) => cat).join(", ")}
+          </p>
         )}
         <Title className="text-sm line-clamp-1">{product?.name}</Title>
         <div>
-          <div>
+          <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
-               <StarIcon key={index} />
+              <StarIcon
+                key={index}
+                className={
+                  index < 4 ? "text-shop_light_green" : "text-shop_light_text"
+                }
+                fill={index < 4 ? "#93D991" : "ababab"}
+              />
             ))}
           </div>
         </div>
