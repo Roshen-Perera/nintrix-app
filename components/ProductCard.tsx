@@ -17,6 +17,8 @@ const ProductCard = ({ product }: { product: Product }) => {
             loading="lazy"
             width={700}
             height={700}
+            className={`w-full h-64 object-contain overflow-hidden transition-transform bg-shop_light_bg duration-500 
+              ${product?.stock !== 0 ? "group-hover:scale-105" : "opacity-50"}`}
           />
         )}
         <AddToWishlistBtn product={product} />
