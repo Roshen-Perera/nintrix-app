@@ -8,6 +8,7 @@ import { set } from "sanity";
 import { client } from "@/sanity/lib/client";
 import { motion } from "motion/react";
 import { Loader2 } from "lucide-react";
+import NoProductAvailable from "./NoProductAvailable";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -51,7 +52,7 @@ const ProductGrid = () => {
       ) : products?.length ? (
         <>Product</>
       ) : (
-        <>No Products</>
+        <NoProductAvailable selectedTab={selectedCategory} />
       )}
     </div>
   );
