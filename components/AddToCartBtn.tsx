@@ -13,9 +13,13 @@ interface Props {
 
 const AddToCartBtn = ({ product, className }: Props) => {
   const isOutOfStock = product?.stock === 0;
+    const handleAddtoCart = () => {
+        window.alert(`${product?.name} added to cart!`);
+    };
   return (
     <div>
       <Button
+        onClick={handleAddtoCart}
         disabled={isOutOfStock}
         className={cn(
           "w-full bg-shop_dark_green/80 text-lightBg shadow-none border border-shop_dark_green/80 font-semibold tracking-wide text-shop_light_bg hover:bg-shop_dark_green hover:border-shop_dark_green hoverEffect",
