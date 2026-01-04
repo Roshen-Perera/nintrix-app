@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import AddToWishlistBtn from "./AddToWishlistBtn";
 import Title from "./Title";
+import PriceView from "./PriceView";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -84,6 +85,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             {(product?.stock as number) > 0 ? product?.stock : "Out of Stock"}
           </p>
         </div>
+        <PriceView price={product?.price} discount={product?.discount} />
       </div>
     </div>
   );
