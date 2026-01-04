@@ -16,7 +16,13 @@ const ProductCard = ({ product }: { product: Product }) => {
             height={700}
           />
         )}
+        {product?.status === "sale" && (
+          <p className="absolute top-2 left-2 z-10 text-xs border-darkColor/50 px-2 rounded-full group-hover:border-shop_light_green hoverEffect">
+            Sale!
+          </p>
+        )}
       </div>
+      <div className="p-3">Product detals</div>
     </div>
   );
 };
