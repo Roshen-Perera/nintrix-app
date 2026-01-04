@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AddToWishlistBtn from "./AddToWishlistBtn";
-import { Title } from "./ui/text";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
