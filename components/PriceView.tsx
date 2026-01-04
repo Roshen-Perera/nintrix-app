@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const PriceView = () => {
+const PriceView = ({ price, discount, className }: Props) => {
   return <div>PCV</div>;
 };
 
