@@ -23,6 +23,11 @@ const ProductCard = ({ product }: { product: Product }) => {
             Sale!
           </p>
         )}
+        {product?.status === "new" && (
+          <p className="absolute top-2 left-2 z-10 text-xs border border-darkColor/50 px-2 rounded-full group-hover:border-shop_light_green group-hover:text-shop_light_green hoverEffect">
+            New!
+          </p>
+        )}
         {product?.status === "hot" && (
           <Link
             href={"/deal"}
