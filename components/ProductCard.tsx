@@ -5,7 +5,7 @@ import React from "react";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div>
+    <div className="text-sm border">
       <div>
         {product?.images && (
           <Image
