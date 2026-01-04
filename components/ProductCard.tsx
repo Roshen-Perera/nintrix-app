@@ -79,7 +79,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           <p
             className={`font-semibold ${product?.stock === 0 ? "text-red-600" : "text-shop_light_green"}`}
           >
-            {(product?.stock as number) > 0 ? product?.stock : "Out of Stock"}
+            {(product?.stock as number) > 0 ? product?.stock : "0"}
           </p>
         </div>
 
