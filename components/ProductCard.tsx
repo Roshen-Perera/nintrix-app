@@ -4,6 +4,7 @@ import { Flame } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import AddToWishlistBtn from "./AddToWishlistBtn";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -18,6 +19,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             height={700}
           />
         )}
+        <AddToWishlistBtn />
         {product?.status === "sale" && (
           <p className="absolute top-2 left-2 z-10 text-xs border border-darkColor/50 px-2 rounded-full group-hover:border-shop_light_green group-hover:text-shop_light_green hoverEffect">
             Sale!
